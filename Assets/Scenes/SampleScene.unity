@@ -315,10 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165d85b80ca60bc4a82129d820c4f923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card1: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
-  Card2: {fileID: 3681997943079942321, guid: efbba3dc8bcafc445be1576873b7a393, type: 3}
-  PlayerArea: {fileID: 0}
-  EnemyArea: {fileID: 0}
+  Card: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
+  PlayerArea: {fileID: 520709846}
+  EnemyArea: {fileID: 1130186607}
 --- !u!1 &335094846
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,8 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165d85b80ca60bc4a82129d820c4f923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card1: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
-  Card2: {fileID: 3681997943079942321, guid: efbba3dc8bcafc445be1576873b7a393, type: 3}
+  Card: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
   PlayerArea: {fileID: 520709846}
   EnemyArea: {fileID: 1130186607}
 --- !u!114 &838782573

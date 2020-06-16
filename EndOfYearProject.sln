@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{33DC5D31-EEA8-817F-8170-FDBA639CC7CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uno_Interactions", "..\FreshmenFinalProject\Uno_Interactions\Uno_Interactions.csproj", "{87269289-97AA-4C83-8D8B-D08EA0137EEB}"
@@ -24,8 +22,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9A38F31B-57FB-4A8D-93AE-5D29FC7E521C}
 	EndGlobalSection
 EndGlobal

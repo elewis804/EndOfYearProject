@@ -5,7 +5,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection.Metadata;
+using UnityEngine;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -26,7 +26,7 @@ namespace Uno_Interactions
 
         public void Draw(Deck deck)
         {
-            hand.Add(deck.getRandomCard());
+           // hand.Add(deck.getRandomCard());
         }
 
         public static void Main()
@@ -36,7 +36,7 @@ namespace Uno_Interactions
             //To do - learn foreach loops and implement a test to print all the card names in a player's hand
             foreach (Card c in p.hand)
             {
-                Console.WriteLine(c.name);
+                Console.WriteLine(c.Name());
             }
         }
 

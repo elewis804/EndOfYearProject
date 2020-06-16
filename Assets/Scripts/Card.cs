@@ -1,21 +1,33 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 //possible to create a program that can add cards to gameplay by taking into account color, number / image, 
 //and then placing it over a blank tempelate
 
-namespace Uno_Interactions
+
+public class Card : MonoBehaviour
 {
-    class Card
+    private Image myImage;
+    public string effect;
+    public Text myText;
+
+    public void Awake()
     {
-        public string name;
+        myImage = GetComponent<Image>();
         
-        public string color;
-        public string effect;
-        public Card(string name, string color, string effect){
-            this.name = name;
-            
-            this.color = color;
-            this.effect = effect;
-        }
+    }
+
+    public void SetUpCard(string name, Color color, string effect) {
+        myText.text = name;
+        myImage.color = color;
+        this.effect = effect;
+    }
+
+    public string Name()
+    {
+        return myText.text;
     }
 }
+
