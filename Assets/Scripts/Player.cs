@@ -29,16 +29,6 @@ namespace Uno_Interactions
             hand.Add(deck.getRandomCard());
         }
 
-        public static void Main()
-        {
-            Deck d = new Deck();
-            Player p = new Player(d);
-            //To do - learn foreach loops and implement a test to print all the card names in a player's hand
-            foreach (Card c in p.hand)
-            {
-                Console.WriteLine(c.name);
-            }
-        }
 
     }
 
