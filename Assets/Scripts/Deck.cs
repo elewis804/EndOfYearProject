@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class Deck : MonoBehaviour
 {
-   /* public List<Card> deck = new List<Card>();
+    public List<Card> deck = new List<Card>();
     public Deck()
     {
         for (int x = 0; x < 10; x++)
@@ -70,5 +70,5 @@ public class Deck : MonoBehaviour
         return y;
     }
 
-    */
+    
 }
