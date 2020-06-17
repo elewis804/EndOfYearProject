@@ -5,49 +5,54 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Uno_Interactions
+
+public class Player : MonoBehaviour
 {
-    public class Player : MonoBehaviour
+
+    public int score = 0;
+    public List<Card> hand = new List<Card>();
+    public Deck deck = new Deck();
+    
+
+        //SHOULD THE DECK OBJECT STILL EXIST? MIGHT BE POSSIBLE TO STILL HAVE PLAYERS SHARE THE SAME DECK IF
+        //I 
+    
+
+    public void Update()
     {
-
-        public int score = 0;
-        public List<Card> hand = new List<Card>();
-        public Deck deck;
-
-        void Start()
-        {
-
-        }
-
-        public void Update()
-        {
-
-        }
-
-        public void SetDeck(Deck d)
-        {
-            this.deck = d;
-        }
-
-
-        public void DrawHand(Deck d)
-        {
-            for (int x = 0; x < 7; x++)
-            {
-                Draw(d);
-            }
-        }
-
-        public void Draw(Deck deck)
-        {
-            hand.Add(deck.getRandomCard());
-        }
-
-
 
     }
 
+    public void Start() {
+        SetDeck();
+    }
+    
+    
+
+    public void SetDeck()
+    {
+        
+    }
+
+
+    public void DrawHand(Deck d)
+    {
+        for (int x = 0; x < 7; x++)
+        {
+            Draw(d);
+        }
+    }
+
+    public void Draw()
+    {
+        hand.Add(getRandomCard());
+    }
+
 }
+
+    
+
