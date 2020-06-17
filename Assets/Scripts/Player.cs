@@ -6,12 +6,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Uno_Interactions
-{
-    class Player
+
+
+    public class Player : MonoBehaviour
     {
         public int score = 0;
         public List<Card> hand = new List<Card>();
@@ -42,4 +43,4 @@ namespace Uno_Interactions
 
     }
 
-}
+

@@ -3,9 +3,11 @@
 
 using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 
-public class Deck
+public class Deck : MonoBehaviour
 {
    /* public List<Card> deck = new List<Card>();
     public Deck()
@@ -14,50 +16,50 @@ public class Deck
         {
             if (x == 0)
             {
-                deck.Add(new Card((string)x.ToString(), "Blue", null));
-                deck.Add(new Card((string)x.ToString(), "Red", null));
-                deck.Add(new Card((string)x.ToString(), "Yellow", null));
-                deck.Add(new Card((string)x.ToString(), "Green", null));
+                deck.Add(new Card((string)x.ToString(), Color.blue));
+                deck.Add(new Card((string)x.ToString(), Color.red ));
+                deck.Add(new Card((string)x.ToString(), Color.yellow ));
+                deck.Add(new Card((string)x.ToString(), Color.green ));
             }
             else
             {
                 for (int y = 0; y < 2; y++)
                 {
-                    deck.Add(new Card((string)x.ToString(), "Blue", null));
-                    deck.Add(new Card((string)x.ToString(), "Red", null));
-                    deck.Add(new Card((string)x.ToString(), "Yellow", null));
-                    deck.Add(new Card((string)x.ToString(), "Green", null));
+                    deck.Add(new Card((string)x.ToString(), Color.blue ));
+                    deck.Add(new Card((string)x.ToString(), Color.red ));
+                    deck.Add(new Card((string)x.ToString(), Color.yellow ));
+                    deck.Add(new Card((string)x.ToString(), Color.green ));
                 }
             }
         }
 
         for (int x = 0; x < 2; x++)
         {
-            deck.Add(new Card("Draw2", "Blue", "+2"));
-            deck.Add(new Card("Draw2", "Green", "+2"));
-            deck.Add(new Card("Draw2", "Yellow", "+2"));
-            deck.Add(new Card("Draw2", "Red", "+2"));
+            deck.Add(new Card("Draw2", Color.blue);
+            deck.Add(new Card("Draw2", Color.green));
+            deck.Add(new Card("Draw2", Color.yellow));
+            deck.Add(new Card("Draw2", Color.red));
 
-            deck.Add(new Card("Reverse", "Blue", "Reverse"));
-            deck.Add(new Card("Reverse", "Red", "Reverse"));
-            deck.Add(new Card("Reverse", "Green", "Reverse"));
-            deck.Add(new Card("Reverse", "Yellow", "Reverse"));
+            deck.Add(new Card("Reverse", Color.blue));
+            deck.Add(new Card("Reverse", Color.red));
+            deck.Add(new Card("Reverse", Color.green));
+            deck.Add(new Card("Reverse", Color.yellow));
 
-            deck.Add(new Card("Skip", "Blue", "Skip"));
-            deck.Add(new Card("Skip", "Red", "Skip"));
-            deck.Add(new Card("Skip", "Yellow", "Skip"));
-            deck.Add(new Card("Skip", "Green", "Skip"));
+            deck.Add(new Card("Skip", Color.blue));
+            deck.Add(new Card("Skip", Color.red);
+            deck.Add(new Card("Skip", Color.yellow));
+            deck.Add(new Card("Skip", Color.green));
         }
 
-        deck.Add(new Card("Draw4", null, "+4"));
-        deck.Add(new Card("Draw4", null, "+4"));
-        deck.Add(new Card("Draw4", null, "+4"));
-        deck.Add(new Card("Draw4", null, "+4"));
+        deck.Add(new Card("Draw4",Color.black));
+        deck.Add(new Card("Draw4",Color.black));
+        deck.Add(new Card("Draw4", Color.black));
+        deck.Add(new Card("Draw4", Color.black));
 
-        deck.Add(new Card("Draw2", null, "Wild"));
-        deck.Add(new Card("Draw2", null, "Wild"));
-        deck.Add(new Card("Draw2", null, "Wild"));
-        deck.Add(new Card("Draw2", null, "Wild"));
+        deck.Add(new Card("Draw2", Color.black));
+        deck.Add(new Card("Draw2", Color.black));
+        deck.Add(new Card("Draw2", Color.black));
+        deck.Add(new Card("Draw2", Color.black));
     }
 
     public Card getRandomCard()
