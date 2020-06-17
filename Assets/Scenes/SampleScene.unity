@@ -318,6 +318,8 @@ MonoBehaviour:
   Card: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
   PlayerArea: {fileID: 520709846}
   EnemyArea: {fileID: 1130186607}
+  CardArea: {fileID: 0}
+  playerCard: {fileID: 0}
 --- !u!1 &335094846
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,9 +619,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 826415506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d57eeff69078cd488cb9f14883114f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 165d85b80ca60bc4a82129d820c4f923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Card: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
+  PlayerArea: {fileID: 520709846}
+  EnemyArea: {fileID: 1130186607}
+  CardArea: {fileID: 2147410830}
+  playerCard: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0,
+    type: 3}
 --- !u!114 &826415509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +670,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 826415510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 826415508}
+        m_MethodName: onPlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &826415510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +773,8 @@ MonoBehaviour:
   Card: {fileID: 5732369403705865197, guid: cec1e6e57fa17214aae475dfc274d2f0, type: 3}
   PlayerArea: {fileID: 520709846}
   EnemyArea: {fileID: 1130186607}
+  CardArea: {fileID: 2147410830}
+  playerCard: {fileID: 0}
 --- !u!114 &838782573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,8 +818,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838782572}
-        m_MethodName: onClick
+      - m_Target: {fileID: 826415508}
+        m_MethodName: onDrawClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
