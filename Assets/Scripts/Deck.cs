@@ -7,11 +7,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Deck : MonoBehaviour
+public class Deck
 {
     public static List<BackCard> deck = new List<BackCard>();
-    public void Start()
+    public static List<gameObject> gameDeck = new List<gameObject>();
+    public Deck()
     {
+        Card c = GetComponent<Card>;
+        int n = 0;
+        int c = 1;
+        
+        foreach (Transform t in GameObject.Find("Cards").transform)
+        {
+            gameDeck.Add(t.gameObject);
+            gameDeck[gameDeck.Count - 1].name;
+        }
+
         for (int x = 0; x < 10; x++)
         {
             if (x == 0)
@@ -59,16 +70,18 @@ public class Deck : MonoBehaviour
         deck.Add(new BackCard("Draw2", null));
         deck.Add(new BackCard("Draw2", null));
         deck.Add(new BackCard("Draw2", null));
-        deck.Add(new BackCard("Draw2", Color.black));
+        deck.Add(new BackCard("Draw2", null));
     }
 
-    public Card getRandomCard()
+    public gameObject getRandomCard()
     {
         Random x = new Random();
-        BackCard y = deck[x.Next(0, 108)];
-        deck.Remove(y);
+        gameObject y = gameDeck[x.Next(0, gameDeck.Count)];
+        gameDeck.Remove(y);
         return y;
     }
+
+
 
     
 }

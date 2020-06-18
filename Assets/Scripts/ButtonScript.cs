@@ -9,11 +9,16 @@ public class ButtonScript : MonoBehaviour {
     public GameObject EnemyArea;
     public GameObject CardArea;
     public GameObject playerCard;
-
+    public Deck d;
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void SetDeck(Deck deck)
+    {
+        d = deck;
     }
 
     public void onDrawClick(){

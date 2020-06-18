@@ -10,7 +10,7 @@ public class Card : MonoBehaviour
 {
     private Image myImage;
     public string color;
-    public Text myText;
+    public string name;
 
     public void Awake()
     {
@@ -18,30 +18,32 @@ public class Card : MonoBehaviour
         
     }
 
-    public void SetUpCard(string name, Color color) {
+    public void SetUpCard(string name, string color) {
         myText.text = name;
         myImage.color = color;
     }
 
+    /*
     public void Copy(BackCard c)
     {
         myText.text = c.name;
         color = c.color;
     }
+    */
 
     public void Swap(string color)
     {
         this.color = color;
     }
 
-    public string Name()
+    /*public string Name()
     {
         return myText.text;
-    }
+    }*/
 
     public bool Equals(Card c)
     {
-        if (Name().Equals(c.Name()) || color.Equals(c.color))
+        if (name.Equals(c.name) || color.Equals(c.color))
             return true;
         else
             return false;

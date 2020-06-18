@@ -14,42 +14,46 @@ public class Player : MonoBehaviour
 {
 
     public int score = 0;
-    public List<Card> hand = new List<Card>();
-    public Deck deck = new Deck();
-    
+    public List<gameObject> hand = new List<gameObject>();
+    private bool drawn = false;
 
-        //SHOULD THE DECK OBJECT STILL EXIST? MIGHT BE POSSIBLE TO STILL HAVE PLAYERS SHARE THE SAME DECK IF
-        //I 
+    
+   
     
 
     public void Update()
     {
-
+        if (hand.Count < 1 && drawn)
+        {
+            score++;
+        }
     }
 
     public void Start() {
-        SetDeck();
+        //SetDeck();
+        DrawHand();
     }
     
     
-
-    public void SetDeck()
+    /*
+    public void SetDeck(Deck d)
     {
-        
+        this.deck = d;
     }
+    */
 
-
-    public void DrawHand(Deck d)
+    public void DrawHand()
     {
         for (int x = 0; x < 7; x++)
         {
-            Draw(d);
+            Draw();
         }
+        drawn = true;
     }
 
     public void Draw()
     {
-        hand.Add(getRandomCard());
+        hand.Add(Deck.getRandomCard());
     }
 
 }
