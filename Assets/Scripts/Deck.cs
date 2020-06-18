@@ -20,7 +20,15 @@ public class Deck
         foreach (Transform t in GameObject.Find("Cards").transform)
         {
             gameDeck.Add(t.gameObject);
-            gameDeck[gameDeck.Count - 1].name;
+            
+
+            gameDeck[gameDeck.Count - 1].name = ;
+
+
+            if (n < 12)
+                n++;
+            else
+                n = 0;
         }
 
         for (int x = 0; x < 10; x++)
@@ -80,6 +88,31 @@ public class Deck
         gameDeck.Remove(y);
         return y;
     }
+
+    public void Shuffle(List<gameObject> f)
+    {
+        List tempList = new List<gameObject>();
+        Random random = new Random();
+        int length = f.Count;
+        int TempIndex = 0;
+
+        while (length > 0)
+        {
+            TempIndex = random.Next(0, length); 
+            TempList.Add(f[TempIndex]); 
+            f.RemoveAt(TempIndex); 
+            length = f.Count; 
+        }
+
+        gameDeck.Clear();
+
+        for (int i = 0; i < tempList.Count; i++)
+        {
+            gameDeck[i] = tempList[i];
+        }
+    }
+
+    
 
 
 

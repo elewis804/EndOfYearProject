@@ -41,7 +41,7 @@ public class Card : MonoBehaviour
         return myText.text;
     }*/
 
-    public bool Equals(Card c)
+    public static bool Equals(Card c)
     {
         if (name.Equals(c.name) || color.Equals(c.color))
             return true;

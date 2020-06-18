@@ -16,11 +16,14 @@ public class ButtonScript : MonoBehaviour {
         
     }
 
+    /*
+     * No reason to implement this method now that Deck lists are static
+     * 
     public void SetDeck(Deck deck)
     {
         d = deck;
     }
-
+    */
     public void onDrawClick(){
         GameObject playerCard = Instantiate(Card, new Vector3(0, 0, 0), Quaternion.identity);
         Card c = playerCard.GetComponent<Card>();

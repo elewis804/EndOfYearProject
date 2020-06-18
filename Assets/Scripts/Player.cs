@@ -10,17 +10,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Player : MonoBehaviour
+public class Player
 {
 
     public int score = 0;
     public List<gameObject> hand = new List<gameObject>();
-    private bool drawn = false;
+    public bool drawn = false;
 
     
    
     
-
+    /*
     public void Update()
     {
         if (hand.Count < 1 && drawn)
@@ -28,12 +28,13 @@ public class Player : MonoBehaviour
             score++;
         }
     }
-
+    */
+    /*
     public void Start() {
         //SetDeck();
-        DrawHand();
+        //DrawHand();
     }
-    
+    */
     
     /*
     public void SetDeck(Deck d)
